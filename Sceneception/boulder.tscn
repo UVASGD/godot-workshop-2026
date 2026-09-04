@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dm18kdrgpgips"]
+
+[ext_resource type="Texture2D" uid="uid://7cxotogvbc3u" path="res://Sprites/boulder.png" id="1_mblv8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mblv8"]
+bounce = 0.4
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vf6fq"]
+radius = 16.0
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1435280576]
+physics_material_override = SubResource("PhysicsMaterial_mblv8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=130398802]
+texture = ExtResource("1_mblv8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=103935895]
+shape = SubResource("CircleShape2D_vf6fq")
