@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://bbvf6m6yqqlgf"]
 
-[ext_resource type="Texture2D" uid="uid://du0kx6gragjoh" path="res://Tileset/tileset.png" id="1_xvrq6"]
-[ext_resource type="Texture2D" uid="uid://dopv05pe4qo2q" path="res://Other Pictures/Screenshot 2026-09-12 142455.png" id="2_lfd0i"]
-[ext_resource type="Texture2D" uid="uid://bd5ncrrotidi1" path="res://Other Pictures/Screenshot 2026-09-12 142900.png" id="3_1cp1x"]
-[ext_resource type="Texture2D" uid="uid://d1m6cycnhq1h1" path="res://Other Pictures/Screenshot 2026-09-12 143848.png" id="4_bi2ni"]
-[ext_resource type="Texture2D" uid="uid://lv6nh7o5cowj" path="res://Other Pictures/Screenshot 2026-09-04 063903.png" id="5_2vviy"]
+[ext_resource type="Texture2D" uid="uid://du0kx6gragjoh" path="res://Tileset/tileset.png" id="1_be8x0"]
+[ext_resource type="Texture2D" uid="uid://dopv05pe4qo2q" path="res://Other Pictures/Screenshot 2026-09-12 142455.png" id="2_40da7"]
+[ext_resource type="Texture2D" uid="uid://bd5ncrrotidi1" path="res://Other Pictures/Screenshot 2026-09-12 142900.png" id="3_c2elc"]
+[ext_resource type="Texture2D" uid="uid://d1m6cycnhq1h1" path="res://Other Pictures/Screenshot 2026-09-12 143848.png" id="4_6k8dh"]
+[ext_resource type="Texture2D" uid="uid://lv6nh7o5cowj" path="res://Other Pictures/Screenshot 2026-09-04 063903.png" id="5_1241k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vgqql"]
-texture = ExtResource("1_xvrq6")
+texture = ExtResource("1_be8x0")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -54,7 +54,7 @@ offset_left = -161.0
 offset_top = -279.0
 offset_right = 95.0
 offset_bottom = -203.0
-texture = ExtResource("2_lfd0i")
+texture = ExtResource("2_40da7")
 
 [node name="TextureRect2" type="TextureRect" parent="FirstInstructions" unique_id=1537916195]
 layout_mode = 0
@@ -62,7 +62,7 @@ offset_left = -639.0
 offset_top = -280.0
 offset_right = -177.0
 offset_bottom = -176.0
-texture = ExtResource("3_1cp1x")
+texture = ExtResource("3_c2elc")
 
 [node name="Label2" type="Label" parent="FirstInstructions" unique_id=1431005337]
 layout_mode = 0
@@ -93,7 +93,7 @@ layout_mode = 0
 offset_left = 448.0
 offset_top = -294.0
 offset_right = 730.0
-texture = ExtResource("4_bi2ni")
+texture = ExtResource("4_6k8dh")
 
 [node name="ScriptInstructions" type="Control" parent="." unique_id=717323210]
 visible = false
@@ -120,4 +120,4 @@ offset_left = 172.0
 offset_top = -314.0
 offset_right = 682.0
 offset_bottom = -90.0
-texture = ExtResource("5_2vviy")
+texture = ExtResource("5_1241k")
