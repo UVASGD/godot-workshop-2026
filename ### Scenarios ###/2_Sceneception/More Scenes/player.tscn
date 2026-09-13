@@ -1,18 +1,19 @@
 [gd_scene format=3 uid="uid://bx12vwv286obo"]
 
 [ext_resource type="Script" uid="uid://dwoyd0me15ve1" path="res://### Scenarios ###/2_Sceneception/character_body_2d.gd" id="1_yduwf"]
-[ext_resource type="Texture2D" uid="uid://cf26m8njbyvfs" path="res://Sprites/Default SGD Logo .png" id="2_fx5jj"]
+[ext_resource type="Texture2D" uid="uid://b3y4ljol0et2u" path="res://Sprites/knight.png" id="2_5tbgd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c4ql7"]
-radius = 28.0
-height = 56.0
+radius = 8.0
+height = 28.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1707908792]
+texture_filter = 1
 script = ExtResource("1_yduwf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1647733449]
-scale = Vector2(0.03, 0.03)
-texture = ExtResource("2_fx5jj")
+texture = ExtResource("2_5tbgd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=839333658]
+position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_c4ql7")
