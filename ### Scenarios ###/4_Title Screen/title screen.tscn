@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dymx0x67y1brd"]
 
-[ext_resource type="Texture2D" uid="uid://br0xathmk0su5" path="res://Other Pictures/Screenshot 2026-09-13 110842.png" id="1_atne5"]
-[ext_resource type="Texture2D" uid="uid://be38mf5ewg0fg" path="res://Other Pictures/Screenshot 2026-09-13 110854.png" id="2_6dko1"]
+[ext_resource type="Texture2D" uid="uid://br0xathmk0su5" path="res://Other Pictures/Screenshot 2026-09-13 110842.png" id="1_udtxh"]
+[ext_resource type="Texture2D" uid="uid://be38mf5ewg0fg" path="res://Other Pictures/Screenshot 2026-09-13 110854.png" id="2_a6c44"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vf6fq"]
 font_size = 32
@@ -44,7 +44,7 @@ offset_left = 2061.0
 offset_top = 183.0
 offset_right = 2625.0
 offset_bottom = 799.0
-texture = ExtResource("1_atne5")
+texture = ExtResource("1_udtxh")
 
 [node name="TextureRect2" type="TextureRect" parent="Instructions" unique_id=811006435]
 layout_mode = 0
@@ -52,7 +52,7 @@ offset_left = 2714.0
 offset_top = 55.0
 offset_right = 3568.0
 offset_bottom = 1143.0
-texture = ExtResource("2_6dko1")
+texture = ExtResource("2_a6c44")
 
 [node name="Label3" type="Label" parent="Instructions" unique_id=155652658]
 layout_mode = 0

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="sgd-workshop-template"
-run/main_scene="res://### Scenarios ###/1_PlayerWorld/playerworld.tscn"
+run/main_scene="res://### Scenarios ###/1_PlayerWorld/Playerworld.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [display]
