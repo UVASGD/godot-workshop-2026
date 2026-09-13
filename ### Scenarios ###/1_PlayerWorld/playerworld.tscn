@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d1m6cycnhq1h1" path="res://Other Pictures/Screenshot 2026-09-12 143848.png" id="4_6k8dh"]
 [ext_resource type="Texture2D" uid="uid://lv6nh7o5cowj" path="res://Other Pictures/Screenshot 2026-09-04 063903.png" id="5_1241k"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2elc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40da7"]
 texture = ExtResource("1_40da7")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -138,7 +138,7 @@ texture = ExtResource("1_40da7")
 2:15/0 = 0
 3:15/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vgqql"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2elc"]
 texture = ExtResource("1_be8x0")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -152,8 +152,8 @@ texture = ExtResource("1_be8x0")
 
 [sub_resource type="TileSet" id="TileSet_vf6fq"]
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_vgqql")
-sources/0 = SubResource("TileSetAtlasSource_c2elc")
+sources/1 = SubResource("TileSetAtlasSource_c2elc")
+sources/0 = SubResource("TileSetAtlasSource_40da7")
 
 [node name="Root Node" type="Node2D" unique_id=937745285]
 texture_filter = 1
@@ -245,7 +245,12 @@ offset_right = 155.0
 offset_bottom = -154.0
 text = "Lastly, make the player movable!
 Add a script (with template) to the CharacterBody2D
-by right-clicking it and clicking \"Attach Script\""
+by right-clicking it and clicking \"Attach Script\"
+
+Afterwards it's best practice to save the player
+as a Scene so you can reuse it. Right-click the 
+CharacterBody2D node and click \"Save Branch as Scene\"
+(near the bottom)"
 
 [node name="TextureRect" type="TextureRect" parent="ScriptInstructions" unique_id=280848804]
 layout_mode = 0

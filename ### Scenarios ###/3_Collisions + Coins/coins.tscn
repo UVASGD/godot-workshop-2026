@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://c1xcp1rdbecv" path="res://Tileset/world_tileset.png" id="1_mskg5"]
 [ext_resource type="Texture2D" uid="uid://du0kx6gragjoh" path="res://Tileset/tileset.png" id="2_280p4"]
 [ext_resource type="PackedScene" uid="uid://bx12vwv286obo" path="res://### Scenarios ###/2_Sceneception/More Scenes/player.tscn" id="3_280p4"]
-[ext_resource type="Texture2D" uid="uid://qlary1n82b8o" path="res://Sprites/coin.png" id="4_cwpc6"]
+[ext_resource type="PackedScene" uid="uid://dysi8y4jxgody" path="res://### Scenarios ###/2_Sceneception/More Scenes/coin.tscn" id="4_cwpc6"]
+[ext_resource type="Texture2D" uid="uid://bo1thseyw5hds" path="res://Other Pictures/Screenshot 2026-09-12 233922.png" id="4_h2rx7"]
+[ext_resource type="Texture2D" uid="uid://cjvtv236ntlks" path="res://Other Pictures/Screenshot 2026-09-12 234305.png" id="5_wlrfl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cwpc6"]
 texture = ExtResource("1_mskg5")
@@ -155,47 +157,6 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_7gndk")
 sources/0 = SubResource("TileSetAtlasSource_cwpc6")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vf6fq"]
-
-[sub_resource type="Animation" id="Animation_7gndk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_h2rx7"]
-resource_name = "new_animation"
-length = 1.2
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.099999994, 0.19999999, 0.3, 0.39999998, 0.49999997, 0.6, 0.7, 0.79999995, 0.9, 0.99999994, 1.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wlrfl"]
-_data = {
-&"RESET": SubResource("Animation_7gndk"),
-&"new_animation": SubResource("Animation_h2rx7")
-}
-
 [node name="Root Node" type="Node2D" unique_id=764042992]
 texture_filter = 1
 
@@ -208,10 +169,9 @@ tile_set = SubResource("TileSet_h2rx7")
 
 [node name="Player" parent="." unique_id=1707908792 instance=ExtResource("3_280p4")]
 position = Vector2(-58, 0)
-collision_layer = 2
-collision_mask = 5
 
 [node name="Instructions" type="Control" parent="." unique_id=1091732214]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -226,19 +186,55 @@ offset_bottom = -75.0
 text = "Let's make a collectible coin!
 
 The Coin needs to detect
-when the player gets in range."
+when the player gets in range.
+This is done by using collision 
+layers and masks.
 
-[node name="Area2D" type="Area2D" parent="." unique_id=474639727]
-position = Vector2(40, -27)
+Edit the Coin scene!"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=304523648]
-shape = SubResource("CircleShape2D_vf6fq")
-debug_color = Color(0.6383838, 0.5143199, 0.31444237, 0.41960785)
+[node name="Label2" type="Label" parent="Instructions" unique_id=379566856]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -169.0
+offset_right = 509.0
+offset_bottom = -16.0
+text = "Certain nodes can be added to physics layers.
+When a node has a physics mask corresponding to a layer,
+it will collide with all nodes on that layer.
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1190386556]
-texture = ExtResource("4_cwpc6")
-hframes = 12
+e.g. the world is on physics layer 1, 
+and the player has a physics mask that includes layer 1"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D" unique_id=651190754]
-libraries/ = SubResource("AnimationLibrary_wlrfl")
-autoplay = &"new_animation"
+[node name="Label3" type="Label" parent="Instructions" unique_id=686418169]
+layout_mode = 0
+offset_left = -203.0
+offset_top = 131.0
+offset_right = 247.0
+offset_bottom = 284.0
+text = "Check the slides on how to write a script 
+that makes the coin disappear when the player touches it!"
+
+[node name="TextureRect" type="TextureRect" parent="Instructions" unique_id=68053842]
+layout_mode = 0
+offset_left = -397.0
+offset_top = -280.0
+offset_right = -61.0
+offset_bottom = -192.0
+texture = ExtResource("4_h2rx7")
+
+[node name="TextureRect2" type="TextureRect" parent="Instructions" unique_id=2077722535]
+layout_mode = 0
+offset_left = 532.0
+offset_top = -305.0
+offset_right = 868.0
+offset_bottom = 281.0
+texture = ExtResource("5_wlrfl")
+
+[node name="Coin" parent="." unique_id=656163716 instance=ExtResource("4_cwpc6")]
+position = Vector2(-14, -40)
+
+[node name="Coin2" parent="." unique_id=1931199852 instance=ExtResource("4_cwpc6")]
+position = Vector2(-28, -80)
+
+[node name="Coin3" parent="." unique_id=1665980213 instance=ExtResource("4_cwpc6")]
+position = Vector2(-42, -120)

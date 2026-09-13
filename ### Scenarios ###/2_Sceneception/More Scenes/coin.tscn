@@ -44,6 +44,7 @@ _data = {
 }
 
 [node name="Coin" type="Area2D" unique_id=656163716]
+texture_filter = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1821819217]
 shape = SubResource("CircleShape2D_vf6fq")
