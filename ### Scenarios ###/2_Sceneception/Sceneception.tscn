@@ -32,13 +32,13 @@ tile_set = SubResource("TileSet_2mptc")
 [node name="CharacterBody2D" parent="." unique_id=1707908792 instance=ExtResource("2_0plu1")]
 position = Vector2(1, -33)
 
-[node name="Control" type="Control" parent="." unique_id=134904676]
+[node name="Instructions" type="Control" parent="." unique_id=134904676]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Control" unique_id=577875847]
+[node name="Label" type="Label" parent="Instructions" unique_id=577875847]
 layout_mode = 0
 offset_left = -216.0
 offset_top = -160.0

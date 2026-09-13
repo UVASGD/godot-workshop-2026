@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dymx0x67y1brd"]
+
+[ext_resource type="Texture2D" uid="uid://br0xathmk0su5" path="res://Other Pictures/Screenshot 2026-09-13 110842.png" id="1_atne5"]
+[ext_resource type="Texture2D" uid="uid://be38mf5ewg0fg" path="res://Other Pictures/Screenshot 2026-09-13 110854.png" id="2_6dko1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vf6fq"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_widvd"]
+font_size = 32
+
+[node name="GameContainer" type="Control" unique_id=1304182606]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Instructions" type="Control" parent="." unique_id=2147048534]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Instructions" unique_id=50239648]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 1128.0
+offset_right = 1533.0
+offset_bottom = 1173.0
+text = "Keep everything in the blue box above or else it won't be seen when the game is running!"
+label_settings = SubResource("LabelSettings_vf6fq")
+
+[node name="Label2" type="Label" parent="Instructions" unique_id=686149627]
+layout_mode = 0
+offset_left = 2209.0
+offset_top = -192.0
+offset_right = 3317.0
+offset_bottom = -147.0
+text = "Add a Label and a Button to the Title Screen node, and add text to them
+Attach a script to the Button, then click \"Signals\" in the Inspector 
+and connect the pressed() method"
+label_settings = SubResource("LabelSettings_widvd")
+
+[node name="TextureRect" type="TextureRect" parent="Instructions" unique_id=1030849936]
+layout_mode = 0
+offset_left = 2061.0
+offset_top = 183.0
+offset_right = 2625.0
+offset_bottom = 799.0
+texture = ExtResource("1_atne5")
+
+[node name="TextureRect2" type="TextureRect" parent="Instructions" unique_id=811006435]
+layout_mode = 0
+offset_left = 2714.0
+offset_top = 55.0
+offset_right = 3568.0
+offset_bottom = 1143.0
+texture = ExtResource("2_6dko1")
+
+[node name="Label3" type="Label" parent="Instructions" unique_id=155652658]
+layout_mode = 0
+offset_left = 2154.0
+offset_top = 1274.0
+offset_right = 3262.0
+offset_bottom = 1415.0
+text = "See button_example.gd for an example script! This one changes the active scene.
+
+(FYI this is not best practice, you should use a game container!)"
+label_settings = SubResource("LabelSettings_widvd")
